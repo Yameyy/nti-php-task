@@ -5,10 +5,10 @@ if ($_POST) {
 
   if ($_POST['parity'] % 2 == 0) {
     $sign = "even";
-    $message = "The Number is : $sign";
+    $message = "The Number $_POST[parity] is : $sign";
   } else {
     $sign = "odd";
-    $message = "The Number is : $sign";
+    $message = "The Number  $_POST[parity]  is : $sign";
   }
 }
 
@@ -36,7 +36,7 @@ if ($_POST) {
         <div class="form-group">
           <input type="number" name="parity" class="form-control" id="firstNum" placeholder="Number">
         </div>
-        <button type="submit" class="btn btn-dark">Check</button>
+        <button class="btn btn-dark">Check</button>
         <div>
           <?= $message ?>
         </div>
