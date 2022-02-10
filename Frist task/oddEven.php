@@ -34,7 +34,9 @@ if ($_POST) {
     <div class="col-4 offset-4">
       <form method='post'>
         <div class="form-group">
-          <input type="number" name="parity" class="form-control" id="firstNum" placeholder="Number">
+          <input type="number" name="parity" class="form-control" id="firstNum" placeholder="Number" value="<?php if (isset($_POST['parity'])) {
+                                                                                                              echo $_POST['parity'];
+                                                                                                            } ?>">
         </div>
         <button class="btn btn-dark">Check</button>
         <div>
